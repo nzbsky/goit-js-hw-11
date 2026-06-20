@@ -16,6 +16,8 @@ form.addEventListener('submit', event => {
 
   const query = event.target.elements['search-text'].value.trim();
 
+  if (!query) return;
+
   clearGallery();
   showLoader();
 
