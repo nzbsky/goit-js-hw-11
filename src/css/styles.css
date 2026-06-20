@@ -1,0 +1,150 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fff;
+  color: #2e2f42;
+}
+
+/* ── Header / Form ─────────────────────────────────── */
+
+.header {
+  padding: 24px 16px;
+  background-color: #2e2f42;
+  display: flex;
+  justify-content: center;
+}
+
+.form {
+  display: flex;
+  gap: 8px;
+}
+
+.form label {
+  display: flex;
+}
+
+.form input[type='text'] {
+  width: 272px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
+}
+
+.form button[type='submit'] {
+  padding: 8px 16px;
+  background-color: #4e75ff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.form button[type='submit']:hover {
+  background-color: #6c8cff;
+}
+
+/* ── Main ───────────────────────────────────────────── */
+
+.main {
+  padding: 40px 16px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* ── Loader ─────────────────────────────────────────── */
+
+.loader {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 0;
+}
+
+.loader.is-active {
+  display: flex;
+}
+
+/* CSS-only spinner */
+.loader-spin {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #e0e0e0;
+  border-top-color: #4e75ff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ── Gallery ────────────────────────────────────────── */
+
+.gallery {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 24px;
+}
+
+.gallery-item {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.2s ease;
+}
+
+.gallery-item:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.gallery-item-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background-color: #2e2f42;
+  color: #fff;
+}
+
+.gallery-item-info p {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+}
+
+.gallery-item-info p span:first-child {
+  font-weight: 600;
+  font-size: 15px;
+}
